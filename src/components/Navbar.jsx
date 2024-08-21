@@ -3,6 +3,8 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import PokemonCard from './PokemonCard';
 
+import pokeLogo from '../assets/poke-logo.svg';
+
 export default function Navbar() {
 
   const [pokemon, setPokemon] = useState([]);
@@ -11,7 +13,7 @@ export default function Navbar() {
     const [search, setSearch] = useState("");
    
 
-    const API = "https://pokeapi.co/api/v2/pokemon?limit=649";
+    const API = "https://pokeapi.co/api/v2/pokemon?limit=40";
 
     async function fetchPokemon() {
         try {
@@ -65,9 +67,10 @@ export default function Navbar() {
       <>
 
       <div className="header bg-slate-200 shadow-md w-screen h-16 py-3 px-4 flex items-center fixed top-0 left-0 z-50 ">
-
-       <span className='text-2xl font-bold text-sky-950 text-border- absolute left-4 ' >Who's That Pokemon !!!</span>
-
+<div className='flex gap-1 items-center'>
+      <span><img className='w-11 h-11' src={pokeLogo} alt="" /></span>
+       <span className='text-2xl font-bold text-sky-950  ' >Who's That Pokemon !!!</span>
+       </div>
        <div className="pokemon-search absolute right-24 ">
           <input className='bg-slate-200 w-80 h-8 p-1 text-black shadow-md shadow-slate-400 rounded-lg border-[1px] border-slate-400'
             type="text"
@@ -83,7 +86,7 @@ export default function Navbar() {
       </div>
 
       <div className='container w-screen flex min-h-screen absolute top-20 left-5'>
-                <div className='grid grid-cols-4 gap-11 relative left-0'>
+                <div className='grid grid-cols-4 relative gap-11 left-0 md:grid-cols-5 md:gap-3'>
                    
                 {searchData.map((curPokemon) => {
               return (

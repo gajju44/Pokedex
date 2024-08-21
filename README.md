@@ -1,0 +1,1 @@
+# This project was created to get familiar with working with APIs

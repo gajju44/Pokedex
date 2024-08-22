@@ -4,7 +4,7 @@ function PokemonCard({pokemonData}){
   return (
     <>
     <div className="pokenmon group relative w-72 h-96 bg-slate-200 flex shadow-md  rounded-lg  flex-col">
-    <div className="absolute flex justify-center items-center top-0 left-3 w-11/12 h-[40%] shadow-[0_-4px_6px_rgba(0,0,0,0.1)] shadow-indigo-700 bg-slate-200 rounded-[30%_70%_70%_30%/30%_30%_70%_70%] group-hover:rounded-t-full -rotate-180">
+    <div className="absolute flex justify-center items-center top-0 left-0 w-11/12 h-[40%] shadow-[0_-4px_6px_rgba(0,0,0,0.1)] shadow-indigo-700 bg-slate-200 rounded-[30%_70%_70%_30%/30%_30%_70%_70%] group-hover:rounded-t-full -rotate-180">
 
     <img src={pokemonData.sprites.other.dream_world.front_default} alt="" className=' h-36 -rotate-180' />
 

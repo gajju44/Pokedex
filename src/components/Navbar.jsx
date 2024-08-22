@@ -72,21 +72,21 @@ export default function Navbar() {
        <span className='text-2xl font-bold text-sky-950  xs:hidden' >Who's That Pokemon !!!</span>
        </div>
        <div className="pokemon-search absolute right-24 ">
-          <input className='bg-slate-200 w-80 xs:w-60 h-8 p-1 text-black shadow-md shadow-slate-400 rounded-lg border-[1px] border-slate-400'
+          <input className='bg-slate-200 w-80 xs:w-36 xs:right-32 xs:relative h-8 p-1 text-black shadow-md shadow-slate-400 rounded-lg border-[1px] border-slate-400'
             type="text"
             placeholder="Search Pokemon"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />
         </div>  
-        <div className='absolute right-10 '>
+        <div className='absolute right-10 xs:right-40'>
         <button className='h-10 bg-slate-600 flex items-center ' >T</button>
         </div>
 
       </div>
 
       <div className='container w-screen flex min-h-screen absolute top-20 left-0 justify-center'>
-                <div className='grid grid-cols-4 relative gap-11 left-0 md:grid-cols-5 md:gap-3 xs:grid-cols-1'>
+                <div className='grid grid-cols-4 absolute gap-11 left-0 md:grid-cols-5 md:gap-3 xs:grid-cols-1'>
                    
                 {searchData.map((curPokemon) => {
               return (

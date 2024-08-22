@@ -21,6 +21,11 @@ function PokemonCard({pokemonData}){
       case 'poison':
         bgColor = 'bg-purple-950'; 
         break;
+
+        case 'fighting':
+          bgColor = 'bg-red-900'; 
+          break;
+
       case 'water':
         bgColor = 'bg-blue-500';  
         break;

@@ -5,6 +5,7 @@ import PokemonCard from './PokemonCard';
 
 import pokeLogo from '../assets/pika1.png';
 import pokeLoading from '../assets/poke_loading.png';
+import HoverButtonMenu from './button';
 
 
 export default function Navbar() {
@@ -13,6 +14,7 @@ export default function Navbar() {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const [search, setSearch] = useState("");
+    const [filteredType, setFilteredType] = useState(null);
    
 
     const API = "https://pokeapi.co/api/v2/pokemon?limit=649";
@@ -55,12 +57,21 @@ export default function Navbar() {
         return <div><h1>{error.message}</h1></div>;
     }
 
-    
+  
 
+    const handleFilterChange = (type) => {
+        setFilteredType(type);
+    };
+
+    const filteredPokemons = filteredType
+    ? pokemon.filter((pokemonData) =>
+          pokemonData.types.some((t) => t.type.name === filteredType)
+      )
+    : pokemon;
 
  
 
-  const searchData = pokemon.filter((curPokemon) =>
+  const searchData = filteredPokemons.filter((curPokemon) =>
   curPokemon.name.toLowerCase().includes(search.toLowerCase())
 );
 
@@ -84,18 +95,8 @@ export default function Navbar() {
             onChange={(e) => setSearch(e.target.value)}
           />
            <div className='  group'>
-        <button className='h-8 bg-slate-600 flex items-center ' >Type</button>
      
-        <div className='hidden absolute   group-hover:flex flex-col '>
-        <button className='h-8 bg-slate-600  items-center flex' >Normal</button>
-        <button className='h-8 bg-slate-600  items-center flex' >Fighting</button>
-        <button className='h-8 bg-slate-600  items-center flex ' >Poison</button>
-        <button className='h-8 bg-slate-600  items-center flex' >Water</button>
-        <button className='h-8 bg-slate-600  items-center flex' >Grass</button>
-        <button className='h-8 bg-slate-600  items-center flex' >T</button>
-        <button className='h-8 bg-slate-600  items-center flex' >T</button>
-        <button className='h-8 bg-slate-600 items-center flex' >T</button>
-        </div>
+        <HoverButtonMenu onSelect={handleFilterChange} />
         </div>
         </div>  
        

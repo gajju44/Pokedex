@@ -1,0 +1,20 @@
+     <div className='hidden absolute   group-hover:flex flex-col '>
+        <button className='h-8 bg-slate-600  items-center flex' >Normal</button>
+        <button className='h-8 bg-slate-600  items-center flex' >Fighting</button>
+        <button className='h-8 bg-slate-600  items-center flex ' >Poison</button>
+        <button className='h-8 bg-slate-600  items-center flex' >Water</button>
+        <button className='h-8 bg-slate-600  items-center flex' >Grass</button>
+        <button className='h-8 bg-slate-600  items-center flex' >Fire</button>
+        <button className='h-8 bg-slate-600  items-center flex' >Ground</button>
+        <button className='h-8 bg-slate-600 items-center flex' >Flying</button>
+        <button className='h-8 bg-slate-600 items-center flex' >Ice</button>
+        <button className='h-8 bg-slate-600 items-center flex' >Ghost</button>
+        <button className='h-8 bg-slate-600 items-center flex' >Bug</button>
+        <button className='h-8 bg-slate-600 items-center flex' >Psychic</button>
+        <button className='h-8 bg-slate-600 items-center flex' >Dark</button>
+        <button className='h-8 bg-slate-600 items-center flex' >Electric</button>
+        <button className='h-8 bg-slate-600 items-center flex' >Steel</button>
+        <button className='h-8 bg-slate-600 items-center flex' >Dragon</button>
+        <button className='h-8 bg-slate-600 items-center flex' >grass</button>
+
+        </div>

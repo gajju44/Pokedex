@@ -6,10 +6,7 @@ export default {
   ],
   theme: {
     extend: {
-      screens: {
-        'xxs':'330px',
-        'xs': '430px',  // Define a custom breakpoint for extra small screens
-      },
+     
       animation: {
         'spin-slow': 'spin 3s linear infinite',
         'progress-bar': 'scroll 4s ' ,
@@ -23,5 +20,7 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+   
+  ],
 }
